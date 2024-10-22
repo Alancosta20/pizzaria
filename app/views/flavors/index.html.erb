@@ -1,4 +1,13 @@
-<% @flavors.each do |flavor| %>
-    <h1><%=flavor.name%></h1>
-    <h3><%= flavor.description%></h3>
-<% end %>
+<h1>Sabores</h1>
+
+<div class="container-sabores">
+
+    <% @flavors.each do |flavor| %>
+        <div class="sabor-container">
+            <img src="https://www.ogastronomo.com.br/upload/389528334-curiosidades-sobre-a-pizza-portuguesa.jpg" alt="">
+            <h3><%=flavor.name%></h3>
+            <p><%= flavor.description%></p>
+        </div>
+    <% end %>
+
+</div>

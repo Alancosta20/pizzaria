@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+
+ .container-sabores {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    border-top: solid black;
+    border-left: solid black;
+    border-right: solid black;
+
+    padding-top: 16px;
+    border-radius: 5px;
+
+
+ }
+
+ .sabor-container {
+   display: flex;
+   flex-direction: column;
+   width: 300px;
+   margin: 10px;
+   padding: 10px;
+   
+   box-shadow: 2px 4px rgba(0, 0, 0, 0.934);
+   border: solid black;
+   border-radius: 5px;
+
+   background-color: blanchedalmond;
+   
+   
+ }
+
+ .sabor-container img {
+   aspect-ratio: 1.6/1;
+   object-fit: cover;
+ }
