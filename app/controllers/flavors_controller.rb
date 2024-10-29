@@ -8,7 +8,12 @@ class FlavorsController < ApplicationController
   end
 
   def create
-    @flavor = Flavor.create(flavors_params)
+    @flavor = Flavor.new(flavors_params)
+    if @flavor.save
+      redirect_to flavors_path
+    else
+      render :new 
+    end
   end
 
   def destroy
