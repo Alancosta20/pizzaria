@@ -7,6 +7,8 @@
             <img src="https://www.ogastronomo.com.br/upload/389528334-curiosidades-sobre-a-pizza-portuguesa.jpg" alt="">
             <h3><%=flavor.name%></h3>
             <p><%= flavor.description%></p>
+            <%=link_to "Editar", edit_flavor_path(flavor)%>
+            <%=link_to "Excluir", flavor_path(flavor), data:{turbo_method: :delete}%>
         </div>
     <% end %>
 

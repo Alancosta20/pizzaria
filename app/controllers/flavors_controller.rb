@@ -17,15 +17,21 @@ class FlavorsController < ApplicationController
   end
 
   def destroy
+    @flavor=Flavor.find(params[:id])
+    @flavor.destroy
+    redirect_to flavors_path
 
   end
 
   def edit
+    @flavor=Flavor.find(params[:id])
 
   end
 
   def update
-    
+    @flavor=Flavor.find(params[:id])
+    @flavor.update(flavors_params)
+    redirect_to flavors_path
   end
 
   private
