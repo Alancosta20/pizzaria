@@ -1,4 +1,4 @@
 class Pizza < ApplicationRecord
   belongs_to :flavor
-  has many :orders
+  has_many :orders
 end
