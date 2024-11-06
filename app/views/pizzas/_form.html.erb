@@ -1,0 +1,13 @@
+<%= form_with model: @pizza do |f| %>
+    <div class = "form-container">
+
+        <%=f.label :price %>
+        <%=f.number_field :price %>
+
+        <%=f.label :flavor_id%>
+        <%=f.select :flavor_id, Flavor.all.map{|sabor| [sabor.name, sabor.id]}%>
+
+
+        <%=f.submit "Criar", class: "button-new" %>
+    </div>
+<% end %>
