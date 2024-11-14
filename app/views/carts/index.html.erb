@@ -1,0 +1,25 @@
+<h1>Carrinho</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Pizza</th>
+            <th>Tamanho</th>
+            <th>Quantidade</th>
+            <th>preço</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <%@cart.orders.each do |order|%>
+            <tr>
+                <td><%=order.pizza.flavor.name%></td>
+                <td><%=order.size%></td>
+                <td><%=order.quantity%></td>
+                <td><%=order.quantity * order.pizza.price%></td>
+                <td><%=%></td>
+                <td><%=%></td>
+            </tr>
+        <%end%>
+    </tbody>
+</table>

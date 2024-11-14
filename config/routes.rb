@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   
   resources :flavors
   resources :pizzas
+  resources :carts, only: :index
 end
 
