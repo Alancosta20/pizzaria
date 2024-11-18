@@ -1,0 +1,17 @@
+<%= form_with model: @order do |f| %>
+    <div class = "form-container">
+
+        <%=f.label :size %>
+        <%=f.text_field :size %>
+
+        <%=f.label :quantity %>
+        <%=f.number_field :quantity %>
+
+        <%=f.label :pizza_id%>
+        <%=f.select :pizza_id, Pizza.all.map{|pizza| [pizza.flavor.name, pizza.id]} %>
+
+
+        <%=f.submit "Criar", class: "button-new" %>
+
+    </div>
+<% end %>    

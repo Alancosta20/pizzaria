@@ -17,8 +17,8 @@
                 <td><%=order.size%></td>
                 <td><%=order.quantity%></td>
                 <td><%=order.quantity * order.pizza.price%></td>
-                <td><%=%></td>
-                <td><%=%></td>
+                <td><%=link_to "Editar", edit_order_path(order)%></td>
+                <td><%=link_to "Excluir", order_path(order), data:{turbo_method: :delete}%></td>
             </tr>
         <%end%>
     </tbody>

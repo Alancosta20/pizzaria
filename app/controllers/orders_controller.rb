@@ -5,8 +5,9 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new(orders_params)
+    @order.cart= Cart.last
     if @order.save
-      redirect_to orders_path
+      redirect_to carts_path
     else
       render :new
     end
@@ -14,8 +15,8 @@ class OrdersController < ApplicationController
   
   def destroy
     @order = Order.find(params[:id])
-    @order = Order.destroy
-    redirect_to orders_path
+    @order.destroy
+    redirect_to carts_path
   end
 
   def edit
@@ -24,8 +25,8 @@ class OrdersController < ApplicationController
 
   def update
     @order = Order.find(params[:id])
-    @order.upate(orders_params)
-    redirect_to orders_path
+    @order.update(orders_params)
+    redirect_to carts_path
   end
 
   private
